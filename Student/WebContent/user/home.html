@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<link rel="stylesheet" type="text/css" href="../css/plug/home.css" />
+		 <script type="text/javascript" src="../js/angular.min.js"></script>
+	 <script type="text/javascript" src="../js/plug/home.js"></script> 
+  
+<!-- <script type="text/javascript"> -->
+  
+<!-- </script> -->
+</head>
+<body ng-app="student"  ng-controller="homeController" ng-init="findAll()">
+	<div class="home">
+		<p class="p1">公告信息</p>
+				<table border="1" class="table">
+					<tbody>
+						<tr>
+							<th>公告标题</th>
+							<th>发布单位</th>
+							<th>公告分类</th>
+							<th>联系人</th>
+						</tr>
+						<tr ng-repeat="entity in list">
+							<td class="t1"><a href="demo.html" class="a-name">{{entity.aname}}</a></td>
+							<td class="t2">{{entity.deparment}}</td>
+							<td class="t2">{{entity.kind}}</td>
+							<td class="t3">{{entity.person}}</td>
+						</tr>
+					</tbody>
+				</table>
+	</div>
+</body>
+</html>

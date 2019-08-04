@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>师范大学统一门户网站</title>
+	<link rel="stylesheet" type="text/css" href="css/plug/login.css" />
+	<script type="text/javascript" src="js/plug/test.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/plug/register.js"></script>
+		<script type="text/javascript">
+		function register{
+			location.href = "Student/register/regis"
+		}
+		</script>
+</head>
+<body>
+	<div class="parent" >
+		<div class="parent-middle">
+			<img src="img/background.jpg">
+			<div class="middle-input">
+				<p class="desc-input">统一身份认证平台教师登录 </p>
+				<div class="input-parent">
+				<form   method="post" action="/Student/user/login">
+					&nbsp&nbsp&nbsp用户名：<input type="text" placeholder="请输入用户名" class="input-username" name="username"><br/>
+					&nbsp&nbsp&nbsp密&nbsp&nbsp&nbsp码：<input type="password" placeholder="请输入密码" class="input-password" name="password"><br/>
+<!-- 					 <input type="checkbox" name="root" class="choose">管理员 -->
+<!-- 					 <input type="checkbox" name="student" class="choose"> 学生 -->
+				<input type="submit" class="input-button"  value="立即登录" ><br/>
+				<a href="#" class="register"  onclick="show()">还没有账号？立即注册</a>
+				</form>
+				</div>
+			</div>
+		</div>
+			<p class="desc"> One门户·门户特性</p>
+			
+		<div class="parent-img">
+			<ul>
+				<li><img src="img/1.png"></li>
+				<li><img src="img/2.png"></li>
+				<li><img src="img/3.png"></li>
+				<li><img src="img/4.png"></li>
+				<li><img src="img/5.png"></li>
+			</ul>
+		</div>
+	<div class="edit" id="show">
+		<span>注册账号</span>
+		<form action="register/regis">
+		<div class="edit-table">
+		      <text class="userinfo">请输入账号：</text>
+		      <input type="text"  class="rig-username" name="register-username"><br/>
+		    <text class="passwordinfo">  请输入密码：</text>
+		      <input type="password"  class="rig-password" name="register-password"><br/>
+		</div>
+		
+		<div class="edit-footer">						
+<!-- 			<button class="btn-success"data-dismiss="modal" aria-hidden="true" onclick="show();register()">保存</button> -->
+			<input type="submit" class="btn-success" onclick="show();register();window.location.reload()" value="保存">
+			<button  class="btn-close" onclick="show()">关闭</button>
+		</div>
+		</form>
+	</div>
+	</div>
+</body>
+</html>

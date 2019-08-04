@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>统一门户登陆</title>
+
+	<link rel="stylesheet" type="text/css" href="../css/plug/index.css" />
+
+	<script src="../js/jquery.js"></script>
+		
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+   <script type="text/javascript" src="../js/base.js"></script>
+   <script type="text/javascript" src="../js/plug/indexController.js"></script>
+   <script type="text/javascript" src="../js/plug/loginService.js"></script> 
+   
+   <script type="text/javascript" src="../js/plug/test.js"></script> 
+	
+	
+</head>
+<body class="hold-transition skin-green sidebar-mini" ng-app="student" ng-controller="indexController" ng-init="showName()">
+	<div class="parent">
+		<div class="parent-top">
+			<img alt="找不到图片"  class="right-img" src="../img/head.png">
+			<div class="top-left">
+				<p>
+					某师范大学学生<br />&nbsp;&nbsp;&nbsp;管理系统
+				</p>
+			</div>
+			<div class="top-right">
+				<a href="#" class="user"  onclick="show()" data-toggle="dropdown">
+					<p>欢迎您：</p>
+					<span class="hidden-xs">{{loginName}}</span>
+				</a>
+				<div class="top-menu"  id="show">
+					<a href="../user/logout" class="logout"><button>注销</button></a>
+<!-- 					<img src="../img/touxiang.jpg" alt="正在加载"  class="image"> -->
+				</div>
+			</div>
+		</div>
+		
+		<div class="parent-menu">
+			<ul class="sidebar-menu">
+                <li id="admin-index">
+                	<a href="index.html" class="menu-info">菜单</a>
+               	</li>
+                <!-- 菜单 -->
+                <li class="treeview">
+                    <ul class="treeview-menu">
+						<li id="admin-login">
+                            <a href="home.html" class="info" target="iframe">成绩查询</a>
+                        </li>						
+                        <li id="admin-login">
+                            <a href="stu.html" class="info" target="iframe">学生</a>
+                        </li>
+                   
+                    </ul>
+                </li>                   
+                <!-- 菜单 /-->
+            </ul>
+            
+		</div>
+		
+		<!-- 内容区域 -->
+    	<div class="parent-middle">
+       	 <iframe width="100%" id="iframe" name="iframe" 
+                frameborder="0" src="home.html"/>
+       	 </iframe>
+    </div>
+    <!--        	 底部信息 -->
+		<div class="parent-bottom">
+			<footer class="main-footer">
+				<span>&copy; 版权所有 某师范大学 </span> &nbsp; &nbsp; &nbsp; <strong>|</strong> &nbsp; &nbsp; &nbsp;
+    			<span>地址：xx市xx区xx街88号  &nbsp;&nbsp; &nbsp; 邮编：1100111  &nbsp;  &nbsp;&nbsp;</span><strong>|</strong>  &nbsp;&nbsp; &nbsp;
+    			<span>某师范大学门户网站</span> &nbsp;  &nbsp;&nbsp;<strong>|</strong> &nbsp;  &nbsp;&nbsp;
+    			<span class="tel">联系电话：010-84848484 </span>
+    		</footer>
+		</div>
+	</div>
+</body>
+</html>
